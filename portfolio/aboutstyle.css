@@ -1,0 +1,29 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+.main{
+    margin-top: 28vh;
+}
+
+.content{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+.footer{
+    border-top: gray 1px dashed;
+    position:absolute;
+    bottom:30px;
+}
+
+.right{
+    margin:auto;
+}
