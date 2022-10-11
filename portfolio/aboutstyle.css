@@ -1,15 +1,9 @@
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
 .main{
-    margin-top: 28vh;
+    padding-top:10px;
+}
+
+.navbar{
+    border: gray 1px solid;
 }
 
 .content{
