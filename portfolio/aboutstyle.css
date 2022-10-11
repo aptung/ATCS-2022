@@ -1,23 +1,39 @@
-.main{
-    padding-top:10px;
-}
-
 .navbar{
-    border: gray 1px solid;
-}
-
-.content{
+    position:sticky;
+    top: 0;
     display:flex;
     flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #0D2818;
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#buttons{
+    display:flex;
     justify-content:space-around;
 }
 
-.footer{
-    border-top: gray 1px dashed;
-    position:absolute;
-    bottom:30px;
+#title-link{
+    color:white;
+    margin: 5vw;
+    text-decoration: none;
 }
 
-.right{
-    margin:auto;
+.clicky{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: gray 1px solid;
+    margin: 10px;
 }
+
+
+.footer{
+    color: black;
+    background-color:white;
+}
+

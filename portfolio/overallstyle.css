@@ -1,15 +1,22 @@
 
 body{
     background-color:#04471C;
-    color: white;
+    color:floralwhite;
     font-family:sans-serif;
     font-size:large;
+    margin:0px;
 }
 
 img{
-    width: 600px;
+    height: 50vh;
 }
 
 a {
     color:#16DB65;
+}
+
+.footer{
+    font-size:small;
+    border-top: gray 1px dashed;
+    padding: 7px;
 }

@@ -1,14 +1,10 @@
 body{
-    margin-top: 25vh;
+    margin-top: 20vh;
     padding:5px;
 }
 
 .footer{
-    font-size:small;
-    border-top: gray 1px dashed;
-    position:absolute;
-    bottom:30px;
-    padding-top: 5px;
+    margin-top: 20vh;
 }
 
 .content{
