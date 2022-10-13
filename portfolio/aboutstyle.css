@@ -1,39 +1,4 @@
-.navbar{
-    position:sticky;
-    top: 0;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
-    background-color: #0D2818;
-    margin: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#buttons{
-    display:flex;
-    justify-content:space-around;
-}
-
-#title-link{
-    color:white;
-    margin: 5vw;
-    text-decoration: none;
-}
-
-.clicky{
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border: gray 1px solid;
-    margin: 10px;
-}
-
-
-.footer{
-    color: black;
-    background-color:white;
+#my-picture{
+    height:70vh;
 }
 
