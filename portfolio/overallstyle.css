@@ -10,8 +10,13 @@ img{
     height: 50vh;
 }
 
+
 a {
     color:#16DB65;
+}
+
+a:hover{
+    color:white;
 }
 
 .navbar{

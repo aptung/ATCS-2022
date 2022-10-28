@@ -1,24 +1,87 @@
 <!DOCTYPE html>
 <!-- Colors #020202 #0D2818 #04471C #058C42 #16DB65-->
 
+<!--Hero:
+
+- use a jumbotron for the rhs
+
+- use a column layout for the large image/text on the right
+
+- change image to be circular
+
+- have a loading screen upon opening the page
+
+- change the layout so that you scroll down and see links to the various pages
+
+About me:
+
+- add a navbar using bootstrap
+
+- add buttons in the navbar
+
+- use a column layout so that the photo moves depending on the page width
+
+- round corners in the images (for all images)
+
+- change margins to increase padding in general
+
+Experience:
+
+- turn the experiences into cards
+
+- change background color for each card to be alternating
+
+- change the link to be in the footer of the cards
+
+- add more description in each of the experiences using bullet points
+
+- put the date in its own separate section in the cards
+
+Contact:
+
+- change contact section to a modal (https://getbootstrap.com/docs/4.0/components/modal/Links to an external site.)
+
+- add the email/location icons in "contact me"
+
+- put buttons in the modal to dismiss or to send an email
+
+- create a form for contacting me instead of just giving the email address
+
+- embed a map to indicate my location-->
+
 <html>
     <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- Your Personal CSS BELOW this Line -->
         <title>Andrew Tung</title>
         <link rel="stylesheet" type="text/css" href="overallstyle.css">
         <link rel="stylesheet" type="text/css" href="herostyle.css">
     </head>
     <body>
-        <div class = "content">
-            <div class = "left">
-                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&w=1000&q=80">
-            </div>
-            <div class = "right">
-                <div id="maintext"><h1>Andrew Tung</h1></div>
-                <p>Student | Coder</p>
-                <a href="about.html">About Me</a><br>
-                <a href="experience.html">Experience</a><br>
-                Contact: andrew.tung@menloschool.org
+        <div class="container vh-100">
+            <div class="row align-items-center">
+                <div class="bg-info col text-center">
+                    <h1>Andrew Tung</h1>
+                    <p>Student | Coder</p>
+                    <a href="about.html">About Me</a><br>
+                    <a href="experience.html">Experience</a><br>
+                    Contact: andrew.tung@menloschool.org
+                </div>
+                <div class="bg-secondary col">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="rounded image-fluid">
+                </div>
             </div>
         </div>
+
+        <!-- Your Content ABOVE this Line -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
