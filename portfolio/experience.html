@@ -1,94 +1,157 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
-        <!-- Your Personal CSS BELOW this Line -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Experiences</title>
-        <link rel="stylesheet" type="text/css" href="overallstyle.css">
-        <link rel="stylesheet" type="text/css" href="experiencestyle.css">
-    </head>
-    <body>
-        <div class = "container">
-            <div class="navbar">
-                <h1><a href="hero.html" ><span id="title-link">Andrew Tung</span></a></h1>
-                <div id="buttons">
-                    <a href="about.html"><div class = "clicky">About</div></a>
-                    <a href="experience.html"><div class = "clicky">Experience</div></a>
-                    <a href="#contact"><div class = "clicky">Contact</div></a>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Your Personal CSS BELOW this Line -->
+
+    <title>Experiences</title>
+    <link rel="stylesheet" type="text/css" href="overallstyle.css">
+    <link rel="stylesheet" type="text/css" href="experiencestyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="hero.html">Andrew Tung</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="experience.html">Experiences</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
-            <div class = "content">
-                <table>
-                    <tr>
-                        <td>
-                            <center>
-                                <img src="balloon.jpg">
-                                <p>Balloon Launch (2022)</p>
-                                For the ASR balloon launch, I wrote Arduino code for collecting all the data. I also wrote a Java program to process the raw output so that it could be analyzed using a spreadsheet. <a href="https://github.com/aptung/Balloon-Launch"> (Github)</a>
-                            </center>
-                        </td>
-                        <td>
-                            <center>
-                                <img src="https://static.wikia.nocookie.net/board-games-galore/images/4/47/Tictactoe-winning-vector-639732.jpg/revision/latest?cb=20160711013756">
-                                <p>Tic-tac-toe variant (2021)</p>
-                                I wrote a Java program which plays a variant of tic-tac-toe in which each player can move their pieces after they are placed. <a href="https://github.com/aptung/Tic-Tac-Toe-Variant">(Github)</a>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <center>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/15-puzzle_magical.svg/1920px-15-puzzle_magical.svg.png">
-                                <p>N-puzzle (2020)</p>
-                                For AT CS, I wrote a Python program which solves the 15-puzzle game using heuristic searches. The program is also capable of solving the game for 4x4 and 5x5 grids. <a href="https://github.com/aptung/npuzzle">(Github)</a>
-                            </center>
-                        </td>
-                        <td>
-                            <center>
-                                <img src="https://m.media-amazon.com/images/S/aplus-media/sc/eb25c74f-335b-4d64-99bb-34293d5f9de5.__CR0,0,1000,1000_PT0_SX300_V1___.png">
-                                <p>24 game solver (2020)</p>
-                                I wrote a Java program which solves the 24 game for any four numbers, or says that it is not possible.
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <center>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Game_of_life_Simkin_glider_gun.svg/749px-Game_of_life_Simkin_glider_gun.svg.png">
-                                <p>Game of life (2020)</p>
-                                For AP CS, I wrote a Java program which simulates Conway's Game of Life on a finite board.
-                            </center>
-                        </td>
-                        <td>
-                            <center>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/300px-Merge_sort_algorithm_diagram.svg.png">
-                                <p>Sorting algorithms (2020)</p>
-                                Building off of work in AP CS, I wrote a Java program implementing merge sort and compared its run time to bubble sort, selection sort, and quicksort.
-                            </center>
-                        </td>
-                    </tr>
-                </table>
+            <div class="card">
+                <img class="card-img-top" src="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
-            
-            <div class="footer" id="contact">
-                <center><h1>Contact me!</h1>
-                <p>Email: andrew.tung@menloschool.org</p>
-                <p>Location: Menlo Park, CA</p></center>
-                <p id="uppercase-font">Made from scratch with HTML and CSS</p>
+            <div class="card">
+                <img class="card-img-top" src="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
         </div>
 
-        <!-- Your Content ABOVE this Line -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+        <div class="content">
+
+            <table>
+                <tr>
+                    <td>
+                        <center>
+                            <img src="balloon.jpg">
+                            <p>Balloon Launch (2022)</p>
+                            For the ASR balloon launch, I wrote Arduino code for collecting all the data. I also wrote a
+                            Java program to process the raw output so that it could be analyzed using a spreadsheet. <a
+                                href="https://github.com/aptung/Balloon-Launch"> (Github)</a>
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            <img
+                                src="https://static.wikia.nocookie.net/board-games-galore/images/4/47/Tictactoe-winning-vector-639732.jpg/revision/latest?cb=20160711013756">
+                            <p>Tic-tac-toe variant (2021)</p>
+                            I wrote a Java program which plays a variant of tic-tac-toe in which each player can move
+                            their pieces after they are placed. <a
+                                href="https://github.com/aptung/Tic-Tac-Toe-Variant">(Github)</a>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/15-puzzle_magical.svg/1920px-15-puzzle_magical.svg.png">
+                            <p>N-puzzle (2020)</p>
+                            For AT CS, I wrote a Python program which solves the 15-puzzle game using heuristic
+                            searches. The program is also capable of solving the game for 4x4 and 5x5 grids. <a
+                                href="https://github.com/aptung/npuzzle">(Github)</a>
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            <img
+                                src="https://m.media-amazon.com/images/S/aplus-media/sc/eb25c74f-335b-4d64-99bb-34293d5f9de5.__CR0,0,1000,1000_PT0_SX300_V1___.png">
+                            <p>24 game solver (2020)</p>
+                            I wrote a Java program which solves the 24 game for any four numbers, or says that it is not
+                            possible.
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Game_of_life_Simkin_glider_gun.svg/749px-Game_of_life_Simkin_glider_gun.svg.png">
+                            <p>Game of life (2020)</p>
+                            For AP CS, I wrote a Java program which simulates Conway's Game of Life on a finite board.
+                        </center>
+                    </td>
+                    <td>
+                        <center>
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/300px-Merge_sort_algorithm_diagram.svg.png">
+                            <p>Sorting algorithms (2020)</p>
+                            Building off of work in AP CS, I wrote a Java program implementing merge sort and compared
+                            its run time to bubble sort, selection sort, and quicksort.
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer" id="contact">
+            <center>
+                <h1>Contact me!</h1>
+                <p>Email: andrew.tung@menloschool.org</p>
+                <p>Location: Menlo Park, CA</p>
+            </center>
+            <p id="uppercase-font">Made from scratch with HTML and CSS</p>
+        </div>
+    </div>
+
+    <!-- Your Content ABOVE this Line -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

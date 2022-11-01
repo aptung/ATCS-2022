@@ -1,6 +1,11 @@
 img{
     height: 34vh;
 }
-td{
-    padding: 20px;
+
+.row{
+    margin: 10px;
+}
+
+.card{
+    background-color:#058C42;
 }

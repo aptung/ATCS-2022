@@ -7,9 +7,8 @@ body{
 }
 
 img{
-    height: 50vh;
+    margin:5px;
 }
-
 
 a {
     color:#16DB65;
@@ -20,34 +19,18 @@ a:hover{
 }
 
 .navbar{
-    position:sticky;
-    top: 0;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
-    background-color: #0D2818;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-#buttons{
-    display:flex;
-    justify-content:space-around;
+    background-color:#058C42;
 }
 
-#title-link{
-    color:white;
-    margin: 5vw;
-    text-decoration: none;
-}
-
-.clicky{
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border: gray 1px solid;
+/* used to make the navbar more spaced out */
+li{
     margin: 10px;
+}
+
+
+
+.jumbotron{
+    background-color:#058C42;
 }
 
 
@@ -61,12 +44,4 @@ a:hover{
 
 #uppercase-font{
     font-family:copperplate;
-}
-
-td{
-    padding: 10px;
-}
-
-li{
-    margin: 10px;
 }
