@@ -6,7 +6,7 @@ body{
     margin:0px;
 }
 
-img{
+.img-large{
     padding: 5px;
     width: 100%;
 }
@@ -19,6 +19,14 @@ a:hover{
     color:white;
 }
 
+.light-link{
+    color:#058C42;
+}
+
+.light-link:hover{
+    color:black;
+}
+
 .navbar{
     background-color:#058C42;
 }
@@ -28,12 +36,13 @@ li{
     margin: 10px;
 }
 
-
-
 .jumbotron{
     background-color:#058C42;
 }
 
+.icon{
+    width:3vw;
+}
 
 .footer{
     font-size:small;

@@ -20,9 +20,13 @@
 
 <body>
     <div class="container">
+        <!--From bootstrap website https://getbootstrap.com/docs/4.0/components/navbar/-->
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="hero.html">Andrew Tung</a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -34,7 +38,9 @@
             </div>
         </nav>
 
-        <!--to do: add some sort of header/description here-->
+        <h1>Experiences</h1>
+
+        Here are some of the coding projects I've worked on over the past few years.<br><br>
         
         <div class="card-columns">
             <div class="card">
@@ -97,13 +103,15 @@
             </div>
         </div>
 
-        <div class="footer" id="contact">
+        <div class="footer jumbotron">
             <center>
                 <h1>Contact me!</h1>
-                <p>Email: andrew.tung@menloschool.org</p>
-                <p>Location: Menlo Park, CA</p>
+                <!--image credit: http://www.stickpng.com/img/icons-logos-emojis/email-icons/email-icon-black-simple 
+                    https://www.vecteezy.com/vector-art/599083-location-icon-vector-->
+                <p><img src="Images/email.png" class="rounded icon">  Email: andrew.tung@menloschool.org</p>
+                <p><img src="Images/location.png" class="rounded icon"> Location: Menlo Park, CA</p>
             </center>
-            <p id="uppercase-font">Made from scratch with HTML and CSS</p>
+            <p id="uppercase-font">Made using <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" class="light-link">Bootstrap 4</a></p>
         </div>
     </div>
 
