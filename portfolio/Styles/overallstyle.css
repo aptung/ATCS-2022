@@ -1,0 +1,57 @@
+body{
+    background-color:#04471CE5;
+    color:floralwhite;
+    font-family:sans-serif;
+    font-size:large;
+    margin:0px;
+}
+
+.img-large{
+    padding: 5px;
+    width: 100%;
+}
+
+a {
+    color:#16DB65;
+}
+
+a:hover{
+    color:white;
+}
+
+.light-link{
+    color:#058C42;
+}
+
+.light-link:hover{
+    color:black;
+}
+
+.navbar{
+    background-color:#058C42;
+}
+
+/* used to make the navbar more spaced out */
+li{
+    margin: 10px;
+}
+
+.jumbotron{
+    background-color:#058C42;
+}
+
+.icon{
+    width:3vw;
+}
+
+.footer{
+    font-size:small;
+    padding: 7px;
+    font-family:monospace;
+    color: black;
+    background-color:white;
+}
+
+#uppercase-font{
+    font-family:copperplate;
+}
