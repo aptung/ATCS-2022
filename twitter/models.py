@@ -26,10 +26,9 @@ class User(Base):
                              primaryjoin="User.username==Follower.following_id",
                              secondaryjoin="User.username==Follower.follower_id",
                              overlaps="following")
-    def __init__(self, username, password, tweets=None):
+    def __init__(self, username, password):
         self.username = username
         self.password = password
-        self.tweets = tweets
 
     def __repr__(self):
         return "@" + self.username
@@ -43,15 +42,19 @@ class Follower(Base):
     follower_id = Column('follower_id', TEXT, ForeignKey('users.username'))
     following_id = Column('following_id', TEXT, ForeignKey('users.username'))
 
+    def __init__(self, follower_id, following_id):
+        self.follower_id = follower_id
+        self.following_id = following_id
+
 class Tweet(Base):
     __tablename__ = "tweets"
 
     id = Column("id", INTEGER, primary_key=True, autoincrement=True)
     content = Column("content", TEXT, nullable=False)
     timestamp = Column("timestamp", TEXT, nullable=False)
-    username = Column("username", TEXT, nullable=False)
+    username = Column("username", ForeignKey("users.username"))
     user = relationship("User", back_populates="tweets")
-    tags = relationship("Tag", back_populates="tweets")
+    tags = relationship("Tag", secondary= "tweettags", back_populates="tweets")
 
     # Constructor
     def __init__(self, content, timestamp, username):
@@ -71,7 +74,7 @@ class Tag(Base):
     # Columns
     id = Column("id", INTEGER, primary_key=True, autoincrement=True)
     content = Column("content", TEXT, nullable=False)
-    tweets = relationship("Tweet", back_populates="tags")
+    tweets = relationship("Tweet", secondary="tweettags", back_populates="tags")
 
     # Constructor
     def __init__(self, content):
@@ -89,5 +92,6 @@ class TweetTag(Base):
     tweet_id = Column("tweet_id", ForeignKey("tweets.id"))
     tag_id = Column("tag_id", ForeignKey("tags.id"))
 
-    # TODO: Complete the class
-    pass
+    def __init__(self, tweet_id, tag_id):
+        self.tweet_id = tweet_id
+        self.tag_id = tag_id
