@@ -70,8 +70,6 @@ class Twitter:
         while True:
             username = input("Username: ")
             password = input("Password: ")
-            print(username)
-            print(password)
             result = db_session.query(User).where((User.username==username) & (User.password==password)).first()
             if result == None:
                 print("Invalid username or password")
@@ -129,30 +127,58 @@ class Twitter:
         content = input("Create Tweet: ")
         tags = input("Enter your tags separated by spaces (don't use hashtags): ").split(" ")
         db_session.add(Tweet(content, datetime.now(), self.current_user.username))
-        tweet_id = db_session.query(Tweet).last()
+        db_session.commit()
 
-        # fix in case the tag isn't already there
+        tweet_id = db_session.query(Tweet).order_by(Tweet.id.desc()).first().id
+
+        tag_ids = []
         for tag in tags:
-            tag_ids = db_session.query(Tag.id).where(Tag.content==tag)
+            tag_in_database = db_session.query(Tag).where(Tag.content==tag).first()
+            if tag_in_database is None:
+                db_session.add(Tag(tag))
+                db_session.commit()
+                tag_ids.append(db_session.query(Tag).order_by(Tag.id.desc()).first().id)
+            else:
+                tag_ids.append(tag_in_database.id)
         for id in tag_ids:
             db_session.add(TweetTag(tweet_id, id))
         db_session.commit()
+
+        print("Success!")
     
     def view_my_tweets(self):
-        pass
+        tweets = db_session.query(Tweet).where(Tweet.username ==self.current_user.username)
+        for tweet in tweets:
+            print(str(tweet) + "\n====================")
     
     """
     Prints the 5 most recent tweets of the 
     people the user follows
     """
     def view_feed(self):
-        pass
+        tweets = db_session.query(Tweet).order_by(Tweet.timestamp.desc()).limit(5)
+        for t in tweets:
+            if t.username in {u.username for u in self.current_user.following}:
+                print(str(t) + "\n====================")
 
     def search_by_user(self):
-        pass
+        username = input("What username do you want to search for?")
+        users = db_session.query(User)
+        usernames = list(map(lambda x: x.username, users))
+        if username not in usernames:
+            print("There is no user with that username")
+        else:
+            Twitter(db_session.query(User).where(User.username==username).first()).view_my_tweets()
 
     def search_by_tag(self):
-        pass
+        tag = input("What tag do you want to search for?")
+        tags = list(map(lambda x: x.content, db_session.query(Tag)))
+        if tag not in tags:
+            print("That tag does not exist")
+        else:
+            tweets = db_session.query(Tweet).join(TweetTag, TweetTag.tweet_id==Tweet.id).join(Tag, Tag.id==TweetTag.tag_id).where(Tag.content==tag)
+            for tweet in tweets:
+                print(str(tweet) + "\n====================")
 
     """
     Allows the user to select from the 

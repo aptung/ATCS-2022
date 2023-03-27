@@ -64,8 +64,11 @@ class Tweet(Base):
         self.username=username
 
     def __repr__(self):
-        # fix tags?
-        return "@" + self.user.username + "\n" + self.content + "\n" + self.tags + "\n" + self.timestamp
+        str = "@" + self.user.username + "\n" + self.content + "\n" 
+        for tag in self.tags:
+            str += "#" + tag.content + " "
+        str += "\n" + self.timestamp
+        return str
 
 
 class Tag(Base):
